@@ -7,10 +7,9 @@
   "scripts": {
     "start": "ts-node src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:prod": "node build/server.js",
-    "tsc":"tsc",
-    "build": "npm install typescript && npm run tsc",
-    "test2":"node build/server.js"
+    "test2":"node build/server.js",
+    "build": "tsc",
+    "start:prod": "node ./dist/application.js"
   },
   "keywords": [],
   "author": "",
