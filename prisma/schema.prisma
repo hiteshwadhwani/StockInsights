@@ -10,7 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model announcement {
+model announcements {
   id                 String @id @default(auto()) @map("_id") @db.ObjectId
   NEWSID             String
   SCRIP_CD           Int
