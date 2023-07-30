@@ -1,22 +1,14 @@
-// // src/app.ts
-// import express from 'express';
+import app from "./app";
 
-// const app = express();
+const start = async () => {
+  try {
+    app?.listen(process.env.PORT || 7000, () => {
+      console.log(`Listening: http://localhost:${process.env.PORT || 7000}`);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-// app.get('/', (req, res) => {
-//   res.send('Hello, TypeScript and Express!');
-// });
-
-
-// export default app;
-
-import express from 'express'
-const app = express()
-const PORT = 3000
-app.use(express.json())
-app.get("/", (req, res) => {
-  res.send("hello")
-})
-app.listen(PORT, () => {
-  console.log(`Server is listening on port ${PORT}`)
-})
+//establish connection
+start();
